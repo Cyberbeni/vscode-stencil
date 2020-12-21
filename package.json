@@ -4,6 +4,9 @@
     "description": "Support for the Stencil template language.",
     "version": "1.0.1",
     "publisher": "svanimpe",
+    "scripts": {
+        "package": "vsce package"
+    },
     "author": {
         "name": "Steven Van Impe",
         "email": "steven.vanimpe@icloud.com",
@@ -26,41 +29,67 @@
         "Snippets"
     ],
     "contributes": {
-        "languages": [{
-            "id": "stencil",
-            "aliases": ["Stencil"],
-            "extensions": [".stencil"],
-            "configuration": "stencil-language-configuration.json"
-        }, {
-            "id": "stencil-html",
-            "aliases": ["Stencil for HTML"],
-            "extensions": [".html.stencil"],
-            "configuration": "stencil-html-language-configuration.json"
-        }, {
-            "id": "stencil-swift",
-            "aliases": ["Stencil for Swift"],
-            "extensions": [".swift.stencil"],
-            "configuration": "stencil-swift-language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "stencil",
-            "scopeName": "text.stencil",
-            "path": "syntaxes/stencil.tmLanguage"
-        }, {
-            "language": "stencil-html",
-            "scopeName": "text.html.stencil",
-            "path": "syntaxes/stencil-html.tmLanguage"
-        }, {
-            "language": "stencil-swift",
-            "scopeName": "source.swift.stencil",
-            "path": "syntaxes/stencil-swift.tmLanguage"
-        }],
-        "snippets": [{
-            "language": "stencil",
-            "path": "snippets/snippets.json"
-        }, {
-            "language": "stencil-html",
-            "path": "snippets/snippets.json"
-        }]
+        "languages": [
+            {
+                "id": "stencil",
+                "aliases": [
+                    "Stencil"
+                ],
+                "extensions": [
+                    ".stencil"
+                ],
+                "configuration": "stencil-language-configuration.json"
+            },
+            {
+                "id": "stencil-html",
+                "aliases": [
+                    "Stencil for HTML"
+                ],
+                "extensions": [
+                    ".html.stencil"
+                ],
+                "configuration": "stencil-html-language-configuration.json"
+            },
+            {
+                "id": "stencil-swift",
+                "aliases": [
+                    "Stencil for Swift"
+                ],
+                "extensions": [
+                    ".swift.stencil"
+                ],
+                "configuration": "stencil-swift-language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "stencil",
+                "scopeName": "text.stencil",
+                "path": "syntaxes/stencil.tmLanguage"
+            },
+            {
+                "language": "stencil-html",
+                "scopeName": "text.html.stencil",
+                "path": "syntaxes/stencil-html.tmLanguage"
+            },
+            {
+                "language": "stencil-swift",
+                "scopeName": "source.swift.stencil",
+                "path": "syntaxes/stencil-swift.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "stencil",
+                "path": "snippets/snippets.json"
+            },
+            {
+                "language": "stencil-html",
+                "path": "snippets/snippets.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vsce": "^1.83.0"
     }
 }
